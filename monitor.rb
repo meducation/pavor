@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/cross_origin'
 require 'aws-sdk'
 
 configure do
@@ -7,6 +8,11 @@ configure do
     set :access_key, config["access_key"]
     set :secret_key, config["secret_key"]
     set :region, config["region"]
+
+    enable :cross_origin
+    set :allow_methods, [:get]
+    # Use http://localhost:3000 for local testing
+    set :allow_origin, 'http://dashboard.meducation.net'
 end
 
 get '/' do

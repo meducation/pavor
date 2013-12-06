@@ -13,6 +13,7 @@ GEM
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
+    sinatra-cross_origin (0.2.0)
     tilt (1.4.1)
     uuidtools (2.1.4)
 
@@ -22,3 +23,4 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk
   sinatra (= 1.1.0)
+  sinatra-cross_origin
